@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --header-color: hsl(271, 24%, 48%);
+  --orange-color: hsl(351, 85%, 65%);
+  --orange-second-color: hsl(351, 60%, 50%);
+  --grey-color: hsl(0, 0%, 51%);
+  --white-text-color: hsl(0, 0%, 100%);
+  --border-image-color: hsl(0, 0%, 0%);
+}
+
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--header-color);
+  border-bottom: 1rem solid var(--border-image-color);
+  padding: 1rem 2rem;
+
+}
+
+nav {
+  text-align: right;
+}
+
+a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--white-text-color);
+  font-size: 2rem;
+  font-family: "fira Code", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+  margin-right: 3rem;
+
+}
+
+a:hover {
+  filter: brightness(1.2);
+  transform: scale(1.07);
+  transition: .5s;
+  color: var(--border-image-color);
+}
+
+a::before {
+  content: "";
+  background-color: var(--orange-color);
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+
+}
+
+/* span {
+   display: inline-block; 
+  background-color: var(--orange-color);
+  width: 1rem;
+  height: 1rem;
+  margin-right: 1rem;
+
+} */
+
+img {
+
+  width: auto;
+  height: 6rem;
+  background-size: contain;
+  background-color: var(--orange-color);
+
+}
+
+#button {
+  display: inline-block;
+  background-color: var(--orange-color);
+  padding: 1.8rem 2rem;
+  box-shadow: .5rem .5rem 0rem #000000;
+  margin-right: 0;
+}
+
+#button:hover {
+  background-color: var(--orange-second-color);
+  filter: brightness(1.2);
+  transform: scale(1.07);
+  transition: .5s;
+}
