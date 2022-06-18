@@ -158,10 +158,16 @@ section.skill {
   border-bottom: 1rem solid var(--header-color);
 }
 
+section .main-title {
+  margin-bottom: 6rem;
+
+}
+
 .main-title.-second {
   color: var(--white-text-color);
   text-shadow: none;
   text-align: center;
+
 }
 
 .skills {
@@ -170,8 +176,78 @@ section.skill {
   line-height: 2.5rem;
   color: var(--white-text-color);
   display: flex;
+  align-items: center;
 }
 
 .skills .icon {
   margin-right: 2.5rem;
+  width: 8rem;
+}
+
+.skills .title {
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  box-sizing: border-box;
+  border: .5rem solid #000000;
+  height: 4rem;
+}
+
+.progress-bar::-webkit-progress-bar {
+  background-color: var(--white-text-color);
+}
+
+.progress-bar::-webkit-progress-value {
+  background-color: var(--header-color);
+}
+
+.skills .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.wrapper-skil {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 96rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper-skil .skills {
+  width: 43rem;
+  margin-bottom: 4rem;
+
+
+}
+
+.wrapper-skil .skills:nth-child(odd) {
+  margin-right: 10rem;
+}
+
+.wrapper-skil .progress-bar {
+  width: 32rem;
+}
+
+
+.projetos {
+  height: 52rem;
+  background-color: #000000;
+}
+
+.wrapper-projetos {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+section.projetos {
+  background-color: var(--border-image-color);
+  height: 74rem;
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  border-bottom: 1rem solid var(--orange-color);
 }
