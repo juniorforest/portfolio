@@ -247,7 +247,7 @@ section .main-title {
 section.projetos {
   background-color: var(--border-image-color);
   height: 74rem;
-  padding-top: 5rem;
+  padding-top: 14rem;
   padding-bottom: 10rem;
   border-bottom: 1rem solid var(--orange-color);
 }
