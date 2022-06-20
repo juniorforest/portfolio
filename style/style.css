@@ -9,10 +9,10 @@ html {
   font-size: 62.5%;
 }
 
-/* 261 color orig */
+/* 234 color orig */
 :root {
 
-  --hue: 261;
+  --hue: 234;
   --header-color: hsl(var(--hue), 43%, 45%);
   --orange-color: hsl(calc(var(--hue) + 17), 85%, 65%);
   --orange-second-color: hsl(calc(var(--hue) + 12), 60%, 50%);
@@ -21,11 +21,12 @@ html {
   --white-text-color: hsl(0, 0%, 100%);
   --border-image-color: hsl(0, 0%, 0%);
   --card-color: hsl(calc(var(--hue) - 37), 27%, 41%);
+  --bg-contaots-color: hsl(calc(var(--hue) - 66), 6%, 24%);
 }
 
 
 
-header {
+.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,9 +56,26 @@ header {
   background-color: var(--border-image-color);
 }
 
+.section.-bgContaots {
+  background-color: var(--bg-contaots-color);
+}
+
+.section.-bgSobre {
+  background-color: var(--header-color);
+}
+
 .section.-bbFirst {
   border-color: var(--orange-color);
 }
+
+.section.-bbBlack {
+  border-color: var(--border-image-color);
+}
+
+
+
+
+
 
 h1.header {
   font-size: 2rem;
@@ -146,7 +164,8 @@ section.banner {
   background-image: url(../assets/imag/pixel-normal.png);
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 80.7rem;
+
+  height: 80rem;
   border-bottom: 1rem solid #000000;
   padding-top: 15rem;
   padding-left: 9rem;
@@ -263,5 +282,92 @@ section .main-title {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+}
+
+.description {
+  font-family: 'Fira Code', Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 1.9;
+  color: var(--white-text-color);
+
+  text-align: left;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.btn-arrow {
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  background-color: var(--orange-color);
+  box-shadow: .5rem .5rem 0 #000000;
+
+}
+
+.btn-arrow:hover {
+  filter: brightness(1.2);
+  transform: scale(1.07);
+  transition: .5s;
+  color: var(--border-image-color);
+}
+
+.btn-arrow .content {
+  display: none;
+}
+
+.btn-arrow::before {
+  content: '';
+  display: block;
+  box-sizing: border-box;
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 2rem solid transparent;
+  border-left: 2.8rem solid white;
+  transform: translateX(1.3rem);
+}
+
+.btn-arrow.-left::before {
+  transform: rotate(180deg) translateX(1.3rem);
+}
+
+.node-card {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.node-card::before {
+  content: '';
+  position: absolute;
+  box-sizing: border-box;
+  height: 0;
+  width: 4rem;
+  border-top: .3rem dashed #000000;
+  transform: rotate(90deg) translateX(-47%);
+  bottom: 14rem;
+  z-index: 1;
+
+}
+
+.node-card .title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--orange-color);
+  font-family: "Press Start 2P", sans-serif;
+  margin-bottom: 5rem;
+}
+
+.node-card .logo {
+  display: flex;
+  align-items: center;
+
+  height: 14rem;
+  border: .5rem solid #000000;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: #ceb02a;
 
 }
