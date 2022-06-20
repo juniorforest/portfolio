@@ -337,6 +337,7 @@ section .main-title {
   flex-direction: column;
   align-items: center;
   position: relative;
+
 }
 
 .node-card::before {
