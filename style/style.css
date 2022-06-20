@@ -20,6 +20,7 @@ html {
   --box-color: hsl(195, 6%, 24%);
   --white-text-color: hsl(0, 0%, 100%);
   --border-image-color: hsl(0, 0%, 0%);
+  --card-color: hsl(calc(var(--hue) - 37), 27%, 41%);
 }
 
 
@@ -32,6 +33,30 @@ header {
   border-bottom: 1rem solid var(--border-image-color);
   padding: 1rem 2rem;
 
+}
+
+#logo {
+
+  width: auto;
+  height: 6rem;
+  background-size: contain;
+  background-color: var(--orange-color);
+
+}
+
+.section {
+  background-color: var(--orange-color);
+  padding-top: 5rem;
+  padding-bottom: 10rem;
+  border-bottom: 1rem solid var(--header-color);
+}
+
+.section.-bg {
+  background-color: var(--border-image-color);
+}
+
+.section.-bbFirst {
+  border-color: var(--orange-color);
 }
 
 h1.header {
@@ -65,7 +90,7 @@ a:hover {
   color: var(--border-image-color);
 }
 
-a::before {
+.action::before {
   content: "";
   background-color: var(--orange-color);
   width: 1rem;
@@ -73,14 +98,6 @@ a::before {
   margin-right: 1rem;
 }
 
-#logo {
-
-  width: auto;
-  height: 6rem;
-  background-size: contain;
-  background-color: var(--orange-color);
-
-}
 
 .button {
   display: inline-block;
@@ -150,13 +167,6 @@ section.banner {
   justify-content: space-around;
 }
 
-section.skill {
-  background-color: var(--orange-color);
-  height: 74rem;
-  padding-top: 5rem;
-  padding-bottom: 10rem;
-  border-bottom: 1rem solid var(--header-color);
-}
 
 section .main-title {
   margin-bottom: 6rem;
@@ -209,7 +219,7 @@ section .main-title {
 
 }
 
-.wrapper-skil {
+.wrapper-section {
   display: flex;
   flex-wrap: wrap;
   max-width: 96rem;
@@ -217,37 +227,41 @@ section .main-title {
   margin-right: auto;
 }
 
-.wrapper-skil .skills {
+.wrapper-section .skills {
   width: 43rem;
   margin-bottom: 4rem;
 
 
 }
 
-.wrapper-skil .skills:nth-child(odd) {
+.wrapper-section .skills:nth-child(odd) {
   margin-right: 10rem;
 }
 
-.wrapper-skil .progress-bar {
+.wrapper-section .progress-bar {
   width: 32rem;
 }
 
 
-.projetos {
-  height: 52rem;
-  background-color: #000000;
-}
 
-.wrapper-projetos {
+
+.card-project {
   display: flex;
-  justify-content: space-around;
-
+  justify-content: center;
+  align-items: center;
+  background-color: var(--header-color);
+  width: 28rem;
+  height: 28rem;
+  box-shadow: 1rem 1rem 0px #FFFFFF;
 }
 
-section.projetos {
-  background-color: var(--border-image-color);
-  height: 74rem;
-  padding-top: 14rem;
-  padding-bottom: 10rem;
-  border-bottom: 1rem solid var(--orange-color);
+.card-project.-blue {
+  background-color: var(--card-color);
+}
+
+.wrapper-card {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
 }
