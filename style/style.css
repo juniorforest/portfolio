@@ -1,12 +1,13 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 /* 234 color orig */
@@ -22,6 +23,7 @@ html {
   --border-image-color: hsl(0, 0%, 0%);
   --card-color: hsl(calc(var(--hue) - 37), 27%, 41%);
   --bg-contaots-color: hsl(calc(var(--hue) - 66), 6%, 24%);
+  --title-carousel-color: hsl(calc(var(--hue) + 185), 98%, 51%);
 }
 
 
@@ -262,8 +264,6 @@ section .main-title {
 }
 
 
-
-
 .card-project {
   display: flex;
   justify-content: center;
@@ -295,6 +295,7 @@ section .main-title {
   text-align: left;
   margin-left: 8rem;
   margin-right: 8rem;
+  margin-bottom: 5rem;
 }
 
 .btn-arrow {
@@ -343,27 +344,32 @@ section .main-title {
 .node-card::before {
   content: '';
   position: absolute;
-  box-sizing: border-box;
+
+
   height: 0;
   width: 4rem;
   border-top: .3rem dashed #000000;
-  transform: rotate(90deg) translateX(-47%);
+  transform: rotate(90deg) translateX(-62%);
   bottom: 14rem;
-  z-index: 1;
+
 
 }
 
 .node-card .title {
   font-size: 2.5rem;
   font-weight: 400;
-  color: var(--orange-color);
+  color: var(--title-carousel-color);
   font-family: "Press Start 2P", sans-serif;
   margin-bottom: 5rem;
+
+
 }
 
 .node-card .logo {
   display: flex;
   align-items: center;
+
+
 
   height: 14rem;
   border: .5rem solid #000000;
@@ -371,4 +377,64 @@ section .main-title {
   padding-right: 2rem;
   background-color: #fccf08;
 
+}
+
+.node-card.-clean .logo {
+  padding: 0;
+}
+
+.node-card.-firt .logo {
+  background-color: var(--orange-color);
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+
+  padding-left: 8.5rem;
+  padding-right: 8.5rem;
+
+}
+
+.carousel::after {
+  content: '';
+  position: absolute;
+  left: 5rem;
+  top: 3.8rem;
+  display: block;
+  height: .6rem;
+  width: calc(100% - 10rem);
+
+  background-color: #000000;
+
+
+}
+
+.carousel::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 3.9rem;
+  display: block;
+  border: .2rem dashed #000000;
+
+  width: 100%;
+
+
+}
+
+.carousel .btn-arrow {
+  position: absolute;
+  bottom: 7rem;
+  transform: translateY(50%);
+}
+
+
+.carousel .btn-arrow.-left {
+  left: 1.5rem;
+}
+
+.carousel .btn-arrow.-right {
+  right: 1.5rem;
 }
