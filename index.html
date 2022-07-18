@@ -18,8 +18,9 @@
   <body>
     <header class="main-header">
       <img id="logo" src="/assets/imag/safeimagekit-pixel-art.png" alt="logo" />
+
       <h1 class="header">Josué Junior</h1>
-      <nav>
+      <nav class="menu">
         <a class="action" href="#skills">Skills</a>
         <a class="action" href="#projetos">Projetos</a>
         <a class="action" href="#sobre">Sobre</a>
@@ -243,48 +244,55 @@
       </p>
     </section>
 
-    <section class="section -bgContaots">
+    <form class="section -bgContaots">
       <h2 class="main-title -second">Contatos</h2>
 
       <div class="">
         <div>
-          <label for="user">Nome:</label>
+          <label class="main-label" for="name">Nome:</label>
           <!-- usado pra invular  -->
           <input
+            id="name"
             type="text"
             id="user"
             name="user"
             placeholder="Seu Nome"
-            minlength="10"
+            minlength="4"
             maxlength="20"
             required
             autofocus
           />
         </div>
         <div>
-          <label for="email">Email</label>
+          <label class="main-label" for="email">Email</label>
           <input
+            id="email"
             type="email"
             name="email"
             placeholder="SeuEmail@gmail.com"
-            id="email"
             required
           />
         </div>
         <div>
-          <label for="message">Enviar Mensagem:</label>
-          <textarea name="message" id="message"></textarea>
+          <label class="main-label" for="message">Mensagem:</label>
+          <textarea id="message"></textarea>
         </div>
         <div>
-          <a class="button.-contatos" href="#">Enviar</a>
+          <button type="submit">Enviar</button>
         </div>
       </div>
-    </section>
+    </form>
 
-    <footer>
-      <a href=""><img src="/assets/imag/icon-twitter.svg" alt="" /> </a>
-      <a href=""><img src="/assets/imag/icon-youtube.svg" alt="" /> </a>
-      <a href=""><img src="/assets/imag/icon-discord.svg" alt="" /> </a>
+    <footer class="main-footer">
+      <a class="action" href="" target="_blank"
+        ><img src="/assets/imag/icon-twitter.svg" alt="" />
+      </a>
+      <a class="action" href="" target="_blank"
+        ><img src="/assets/imag/icon-youtube.svg" alt="" />
+      </a>
+      <a class="action" href="" target="_blank"
+        ><img src="/assets/imag/icon-discord.svg" alt="" />
+      </a>
     </footer>
 
     <script src="/js/carousel.js"></script>

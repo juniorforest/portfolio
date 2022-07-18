@@ -38,6 +38,8 @@ html {
 
 }
 
+
+
 #logo {
 
   width: auto;
@@ -84,6 +86,7 @@ h1.header {
   font-family: "Press Start 2P";
   color: var(--white-text-color);
   text-shadow: .5rem .5rem 0rem #000000;
+  display: none;
 
 }
 
@@ -447,6 +450,39 @@ section .main-title {
   display: flex;
   justify-content: space-between;
   transition: transform 150ms ease-in-out;
+}
 
+.main-footer {
+  display: flex;
+  justify-content: center;
+  background-color: #000;
+  padding-top: 2.8rem;
+  padding-bottom: 2.8rem;
+
+}
+
+.main-footer .action {
+  margin-right: 2rem;
+  margin-left: 2rem;
+
+}
+
+
+.main-label {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 4rem;
+  font-family: 'Fira Code', Arial, Helvetica, sans-serif;
+}
+
+@media (max-width: 890px) {
+  .main-header>.menu {
+    display: none;
+  }
+
+  .main-header>.header {
+    display: block;
+  }
 
 }
